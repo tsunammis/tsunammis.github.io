@@ -49,10 +49,10 @@ header {
   padding-bottom: 1px;
   margin: 0 20px;
 }
-.content {
-  padding-top: 100px;
+header .content {
+  padding-top: 50px;
 }
-.avatarContainer {
+header .avatarContainer {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   background-color: #fff;
   border: 3px solid #fff;
@@ -62,12 +62,12 @@ header {
   height: 120px;
   display: inline-block;
 }
-.avatar {
+header .avatar {
   width: 120px;
   height: 120px;
   border-radius: 100%;
 }
-.displayName {
+header .displayName {
   color: #1F1F1F;
   font-weight: 700;
   font-style: normal;
@@ -79,7 +79,7 @@ header {
   word-break: break-word;
   word-wrap: break-word;
 }
-.headline {
+header .headline {
   color: rgba(0, 0, 0, 0.6);
   font-size: 18px;
   outline: 0;
@@ -90,7 +90,6 @@ header {
 .networks {
   list-style: none;
   list-style-image: none;
-  background-color: #fafafa;
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -109,47 +108,63 @@ header {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .networks .network {
-  padding: 10px 20px 5px 20px;
   margin: 0;
+  width: 40px;
+  padding: 0 8px;
 }
-.networks .network-link img {
-  width: 20px;
-  opacity: 0.5;
+.networks .network-link {
+  display: block;
 }
-.networks .network-link img:hover {
-  opacity: 1;
-}
-.network .network-link .label:hover {
+.networks .network-link:hover {
   text-decoration: none;
 }
-.network .network-link .label {
-  font-size: 7px;
-  color: rgba(0, 0, 0, 0.6);
-  text-transform: uppercase;
-  display: block;
-  letter-spacing: 2px;
-  margin-bottom: 7px;
+.networks .network-link:hover img {
+  opacity: 1;
+}
+.networks .network-link img {
+  width: 30px;
+  opacity: 0.5;
+}
+.networks .network-link .label {
+  display: none;
 }
 @media (min-width: 500px) {
+  header .content {
+    padding-top: 100px;
+  }
   .networks {
-    list-style: none;
-    list-style-image: none;
     padding: 10px 0 10px 0;
-    background-color: #fafafa;
+    background-color: #f2efef;
     max-width: 500px;
     margin: 0 auto;
+    display: block;
   }
   .networks .network {
+    padding: 10px 20px 5px 20px;
+    margin: 0;
+    width: auto;
     display: inline-block;
     vertical-align: top;
     border-left: 1px solid rgba(0, 0, 0, 0.05);
   }
   .networks .network:first-child {
     border-left: none;
+  }
+  .networks .network-link img {
+    width: 20px;
+  }
+  .networks .network-link .label {
+    display: block;
+    font-size: 7px;
+    color: rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
   }
 }

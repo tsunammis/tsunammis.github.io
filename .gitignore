@@ -6,3 +6,6 @@
 
 # Idea
 .idea/
+
+# MacOSX
+.DS_Store

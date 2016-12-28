@@ -1,4 +1,4 @@
-# Personal website (tsunammis.github.io / stanislaschollet.com)
+# Personal website
 
 Reachable at those domain:
 * stan.life

@@ -17,7 +17,7 @@ form {
   margin: 0;
 }
 body {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: -0.02em;
   font-weight: 400;
   font-style: normal;
@@ -41,6 +41,21 @@ p {
 }
 body {
   text-align: center;
+}
+h2 {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  font-size: 1.3em;
+}
+.hashtag {
+  padding: 0 10px;
+  color: white;
+}
+.hashtag.hashtag-meetups {
+  background-color: rgba(0, 171, 152, 0.7);
+}
+.hashtag.hashtag-bbls {
+  background-color: rgba(232, 100, 130, 0.8);
 }
 header {
   background-size: cover;
@@ -134,9 +149,59 @@ header .headline {
 .networks .network-link .label {
   display: none;
 }
+.events {
+  text-align: left;
+  list-style: none;
+  list-style-image: none;
+  margin: 0 15px;
+  padding: 0;
+}
+.events .event {
+  margin-bottom: 10px;
+}
+.events .event .title {
+  display: block;
+}
+.events .event .place {
+  display: block;
+  font-size: 0.7em;
+  color: #00AB98;
+}
+.bbls-container {
+  text-align: left;
+  list-style: none;
+  list-style-image: none;
+  margin: 0 15px;
+  display: block;
+  padding: 0;
+}
+.bbls-container li {
+  display: inline;
+}
+.bbls-container li:last-child::after {
+  content: "";
+}
+.bbls-container li::after {
+  content: ", ";
+}
+.ad {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.5);
+}
 @media (min-width: 500px) {
   header .content {
-    padding-top: 100px;
+    padding-top: 50px;
+  }
+  .events {
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
+  .bbls-container {
+    max-width: 500px;
+    margin: 0 auto;
   }
   .networks {
     padding: 10px 0 10px 0;

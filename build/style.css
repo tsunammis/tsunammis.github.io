@@ -57,6 +57,9 @@ h2 {
 .hashtag.hashtag-bbls {
   background-color: rgba(232, 100, 130, 0.8);
 }
+.hashtag.hashtag-confs {
+  background-color: rgba(3, 169, 244, 0.7);
+}
 header {
   background-size: cover;
   background-repeat: no-repeat;
@@ -108,23 +111,18 @@ header .headline {
   margin: 0;
   padding: 0;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -166,6 +164,9 @@ header .headline {
   display: block;
   font-size: 0.7em;
   color: #00AB98;
+}
+.events.events-confs .event .place {
+  color: #03a9f4;
 }
 .bbls-container {
   text-align: left;

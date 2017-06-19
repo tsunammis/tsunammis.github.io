@@ -6,29 +6,24 @@ var path          = require('path'),
     less          = require('gulp-less'),
     watch         = require('gulp-watch');
 
-gulp.task('clean', function() {
-  return gulp.src('build', {read: false})
-    .pipe(clean());
-});
-
-gulp.task('css', ['clean'], function() {
-  return gulp.src('./*.less')
+gulp.task('css', [], function() {
+  return gulp.src('./src/*.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('src'))
     .on('error', gutil.log);
 });
 
 gulp.task('css:watch', function () {
-  return gulp.src('./*.less')
-    .pipe(watch('./*.less'))
+  return gulp.src('./src/*.less')
+    .pipe(watch('./src/*.less'))
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('src'))
     .on('error', gutil.log);
 });
 

@@ -165,8 +165,16 @@ header .headline {
   font-size: 0.7em;
   color: #00AB98;
 }
+.events .event .place a {
+  color: #00AB98;
+  text-decoration: underline;
+}
 .events.events-confs .event .place {
   color: #03a9f4;
+}
+.events.events-confs .event .place a {
+  color: #03a9f4;
+  text-decoration: underline;
 }
 .bbls-container {
   text-align: left;

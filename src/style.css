@@ -60,6 +60,9 @@ h2 {
 .hashtag.hashtag-confs {
   background-color: rgba(3, 169, 244, 0.7);
 }
+.hashtag.hashtag-fun {
+  background-color: rgba(253, 187, 0, 0.7);
+}
 header {
   background-size: cover;
   background-repeat: no-repeat;
@@ -193,6 +196,17 @@ header .headline {
 .bbls-container li::after {
   content: ", ";
 }
+.fun-container {
+  text-align: left;
+  list-style: none;
+  list-style-image: none;
+  margin: 0 15px;
+  display: block;
+  padding: 0;
+}
+.fun-container li {
+  margin-bottom: 10px;
+}
 .ad {
   padding-top: 20px;
   padding-bottom: 15px;
@@ -209,6 +223,10 @@ header .headline {
     display: block;
   }
   .bbls-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .fun-container {
     max-width: 500px;
     margin: 0 auto;
   }

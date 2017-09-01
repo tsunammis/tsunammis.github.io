@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decrypt text from punctuation - Stan Chollet</title>
+    <meta name="author" content="Stan Chollet">
+    <meta name="description" content="Talk only with punctuation. Decrypt text from punctuation, and vice versa.">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://stan.life/wink/">
+    <meta name="twitter:image" content="https://stan.life/wink/wink.png">
+    <meta name="twitter:title" content="Decrypt text from punctuation - Stan Chollet">
+    <meta name="twitter:description" content="Talk only with punctuation. Decrypt text from punctuation, and vice versa.">
+    <meta name="twitter:site" content="@tsunammis">
+    <meta name="twitter:creator" content="@tsunammis">
+    <meta property="og:title" content="Decrypt text from punctuation - Stan Chollet">
+    <meta property="og:url" content="https://stan.life/wink/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="stan.life">
+    <meta property="og:description" content="Talk only with punctuation. Decrypt text from punctuation, and vice versa.">
+    <meta property="og:image" content="https://stan.life/wink/wink.png">
+    <meta property="og:type" content="website">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="wink-encrypt.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M9ZLGCB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <header>
+        <a class="backToHome" href="//stan.life"><span class="pic"></span>back to <span class="highlight">stan.life</span></a>
+        <h1>Decrypt text from punctuation</h1>
+        <img src="wink.png" class="logo" alt=":?!!!.;-?!!!!.;?.;-.;?!!.:?!!!" />
+        <p class="headline">
+            Sometimes, people want to talk only with punctuation 😉<br />
+            So, I created this small tool to decrypt text from punctuation, and vice versa.
+        </p>
+    </header>
+    <div class="container">
+        <div class="block">
+            <span class="desc">Encrypted text <em>(with only punctuation)</em></span>
+            <div class="stringContainer encodedStringContainer">
+                <textarea id="encodedString"></textarea>
+            </div>
+        </div>
+        <div class="block">
+            <span class="desc">Human readable text</span>
+            <div class="stringContainer decodedStringContainer disabled">
+                <textarea id="decodedString"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="github-container">
+        <a class="github" href="https://github.com/tsunammis/wink-encrypt">This useful feature is available on github<br />Don't hesitate to integrate it to your app !</a>
+    </div>
+    <footer>
+        Made with ♥ in Paris 
+    </footer>
+</body>
+</html>

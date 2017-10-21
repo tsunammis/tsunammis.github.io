@@ -5,7 +5,8 @@ $(document).ready(function() {
     })
 
     var db = firebase.database()
-    var winksRef = db.ref('winks')
+    var winksEncodedRef = db.ref('winksEncoded')
+    var winksDecodedRef = db.ref('winksDecoded')
 
     var encodedStringTextarea = $("#encodedString")
     var decodedStringTextarea = $("#decodedString")
@@ -21,13 +22,17 @@ $(document).ready(function() {
     })
 
     encodedStringTextarea.on('keyup change', function() {
-        decodedStringTextarea.val(winkEncrypt.decodeString(encodedStringTextarea.val()))
+        var decodedString = winkEncrypt.decodeString(encodedStringTextarea.val())
+        decodedStringTextarea.val(decodedString)
+        var newWinksEncodedRef = winksEncodedRef.push()
+        newWinksEncodedRef.set({ val: decodedString })
     })
 
     decodedStringTextarea.on('keyup change', function() {
-        encodedStringTextarea.val(winkEncrypt.encodeString(decodedStringTextarea.val()))
-        var newWink = winksRef.push()
-        newWink.set({ decodedValue: decodedStringTextarea.val() })
+        var decodedString = decodedStringTextarea.val()
+        encodedStringTextarea.val(winkEncrypt.encodeString(decodedString))
+        var newWinksDecodedRef = winksDecodedRef.push()
+        newWinksDecodedRef.set({ val: decodedString })
     })
 
     setTimeout(function() {

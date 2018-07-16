@@ -107,6 +107,21 @@ header .headline {
   word-break: break-word;
   word-wrap: break-word;
   letter-spacing: -0.02em;
+  margin-bottom: 1em;
+}
+header .headline a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #696969;
+}
+header .headline .highligth {
+  border-bottom: 2px solid black;
+}
+header .headline .bdcolor-vertdeau {
+  border-bottom: 2px solid rgba(0, 171, 152, 0.7);
+}
+header .headline .bdcolor-chaud {
+  border-bottom: 2px solid rgba(171, 95, 0, 0.7);
 }
 .networks {
   list-style: none;
@@ -188,13 +203,11 @@ header .headline {
   padding: 0;
 }
 .bbls-container li {
-  display: inline;
+  margin-bottom: 4px;
 }
-.bbls-container li:last-child::after {
-  content: "";
-}
-.bbls-container li::after {
-  content: ", ";
+.bbls-container li em {
+  font-size: 0.8em;
+  color: #808080;
 }
 .fun-container {
   text-align: left;

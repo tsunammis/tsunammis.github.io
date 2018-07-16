@@ -109,6 +109,23 @@ header {
     word-break: break-word;
     word-wrap: break-word;
     letter-spacing: -0.02em;
+    margin-bottom: 1em;
+    
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #696969;
+    }
+    
+    .highligth {
+      border-bottom: 2px solid black;
+    }
+    .bdcolor-vertdeau {
+      border-bottom: 2px solid rgba(0, 171, 152, 0.7);
+    }
+    .bdcolor-chaud {
+      border-bottom: 2px solid rgba(171, 95, 0, 0.7);
+    }
   }
 }
 
@@ -199,16 +216,11 @@ header {
   padding: 0;
 
   li {
-    display: inline;
+    margin-bottom: 4px;
 
-    &:last-child {
-      &::after {
-        content: "";
-      }
-    }
-
-    &::after {
-      content: ", ";
+    em {
+      font-size: 0.8em;
+      color: #808080;
     }
   }
 }

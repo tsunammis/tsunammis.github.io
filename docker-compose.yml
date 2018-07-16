@@ -4,8 +4,3 @@ services:
     build: .
     volumes:
       - ./src:/usr/src/app/src
-
-  deploy:
-    build: deploy/
-    volumes:
-      - ./src:/usr/app/public
